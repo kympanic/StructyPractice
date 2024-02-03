@@ -1,15 +1,15 @@
 const intersection = (a, b) => {
-  // todo
-  let newArray = []
-  let theSet = new Set(a)
-  for(let i = 0; i < b.length;i++){
-    if(theSet.has(b[i])){
-      newArray.push(b[i])
-    }
-  }
-  return newArray
+  let interArr = [];
+  let newSet = new Set(a);
+  console.log(newSet)
+ for(let i = 0; i < b.length; i++){
+   if(newSet.has(b[i])){
+     interArr.push(b[i])
+   }
+ } 
+  return interArr
 };
-​
+intersection([4,2,1,6], [3,6,9,2,10])
 ​
 module.exports = {
   intersection,
