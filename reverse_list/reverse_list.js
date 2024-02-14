@@ -12,12 +12,13 @@ const reverseList = (head) => {
     let next = current.next;
     current.next = prev;
     prev = current;
-    current = next
+    current = next;
   }
-  return prev
+  return prev;
 };
 ​
 module.exports = {
   reverseList,
 };
 ​
+  while(current1 !== null && current2 !== null){
