@@ -1,23 +1,22 @@
 const mostFrequentChar = (s) => {
-  let counter = {};
+  // todo
+  let count = {}
   for(let char of s){
-    if(!(char in counter)){
-      counter[char] = 0;
+    if(!(char in count)){
+      count[char] = 0;
     }
-    counter[char]+=1
+    count[char] += 1;
   }
-  
-  let mostChar = null;
+  let best = null;
   for(let char of s){
-    if(mostChar === null || counter[char] > counter[mostChar]){
-      mostChar = char
+    if(best === null || count[char] > count[best]){
+      best = char;
     }
   }
-  return mostChar
+  return best
 };
 ​
 module.exports = {
   mostFrequentChar,
 };
 ​
-  }
