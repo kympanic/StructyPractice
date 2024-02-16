@@ -1,29 +1,24 @@
 const anagrams = (s1, s2) => {
-  // todo
-  if(s1.length !== s2.length)return false;
-  let count = {}
+  let counter = {};
   for(let char of s1){
-    if(!(char in count)){
-      count[char] = 0;
+    if(!(char in counter)){
+      counter[char] = 0;
     }
-    count[char]+=1
+    counter[char] += 1;
   }
   for(let char of s2){
-    if(!(char in count)){
+    if(!(char in counter)){
       return false
     }else{
-      count[char] -= 1
+      counter[char]-= 1;
     }
   }
-  for(let char in count){
-    if(count[char]!== 0)
-      return false
+  for(let char in counter){
+    if(counter[char] !== 0) return false
   }
-  
-  return true
+  return true;
 };
 ​
-anagrams('restful', 'fluster')
 module.exports = {
   anagrams,
 };
