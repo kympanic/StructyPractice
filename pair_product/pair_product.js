@@ -3,7 +3,7 @@ const pairProduct = (numbers, targetProduct) => {
   for(let i = 0; i < numbers.length; i++){
     let num = numbers[i]
     let complement = targetProduct / num;
-    if(complement in results) return [results[complement],i]
+    if(complement in results) return [i,results[complement]]
     results[num] = i
   }
 };
