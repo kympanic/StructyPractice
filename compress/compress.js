@@ -3,19 +3,20 @@ const compress = (s) => {
   let i = 0;
   let j = 0;
   while(j <= s.length){
-    if(s[j] === s[i]){
-      j+=1
+    if(s[j]=== s[i]){
+      j += 1;
     }else{
       let count = j - i;
-      if(count === 1){
+      if(count ===1){
         result.push(s[i])
       }else{
-             result.push(String(count),s[i])
+        result.push(String(count),s[i])
       }
-      i=j
+      i = j
     }
   }
-  return result.join('')
+  
+  return result.join("")
 };
 ​
 module.exports = {
