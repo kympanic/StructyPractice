@@ -1,16 +1,15 @@
 const mostFrequentChar = (s) => {
-  // todo
-  let count = {}
+  let counter = {};
   for(let char of s){
-    if(!(char in count)){
-      count[char] = 0;
+    if(!(char in counter)){
+      counter[char] = 0;
     }
-    count[char] += 1;
+    counter[char]+= 1;
   }
-  let best = null;
-  for(let char of s){
-    if(best === null || count[char] > count[best]){
-      best = char;
+  let best = null
+  for(char in counter){
+    if(best === null || counter[char] > counter[best]){
+      best = char
     }
   }
   return best
