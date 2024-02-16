@@ -6,7 +6,7 @@
 // }
 ​
 const reverseList = (head) => {
-  let current = head;
+  let current = head
   let prev = null;
   while(current !== null){
     let next = current.next;
@@ -21,4 +21,3 @@ module.exports = {
   reverseList,
 };
 ​
-  while(current1 !== null && current2 !== null){
