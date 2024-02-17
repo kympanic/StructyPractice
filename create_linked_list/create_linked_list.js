@@ -8,8 +8,8 @@ class Node {
 const createLinkedList = (values) => {
   let dummyHead = new Node(null)
   let tail = dummyHead;
-  for(let val of values){
-    tail.next = new Node(val)
+  for(let item of values){
+    tail.next = new Node(item)
     tail = tail.next
   }
   return dummyHead.next
@@ -19,3 +19,4 @@ module.exports = {
   createLinkedList,
 };
 ​
+};
