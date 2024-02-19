@@ -8,24 +8,20 @@
 ​
 const depthFirstValues = (root) => {
   if(root === null) return [];
-  
-  let values = []
-  let stack = [root];
+  let result = [];
+  let stack = [root]
   while(stack.length > 0){
-    let current = stack.pop();
-    values.push(current.val)
+    let node = stack.pop();
+    result.push(node.val);
     
-    if(current.right !== null)
-      stack.push(current.right)
-    
-    if(current.left !== null)
-      stack.push(current.left)
-   } 
-  
-  return values;
+    if(node.right !== null) stack.push(node.right)
+    if(node.left !== null) stack.push(node.left)
+  }
+  return result
 };
 ​
 module.exports = {
   depthFirstValues,
 };
 ​
+  }
