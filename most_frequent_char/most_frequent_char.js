@@ -4,15 +4,14 @@ const mostFrequentChar = (s) => {
     if(!(char in counter)){
       counter[char] = 0;
     }
-    counter[char]+= 1;
+    counter[char] += 1;
   }
-  let best = null
-  for(char in counter){
-    if(best === null || counter[char] > counter[best]){
-      best = char
-    }
+  
+  let best = null;
+  for(let char in counter){
+    if(best === null || counter[char] > counter[best] ) best = char;
   }
-  return best
+  return best;
 };
 ​
 module.exports = {
