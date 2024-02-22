@@ -6,13 +6,13 @@
 // }
 ​
 const reverseList = (head) => {
-  let current = head;
+  let currentNode = head;
   let prev = null;
-  while(current !== null){
-    let next = current.next;
-    current.next = prev;
-    prev = current
-    current = next
+  while(currentNode !== null){
+    let next = currentNode.next;
+    currentNode.next = prev;
+    prev = currentNode;
+    currentNode = next;
   }
   return prev;
 };
@@ -21,4 +21,3 @@ module.exports = {
   reverseList,
 };
 ​
-  const rightValues = depthFirstValues(root.right)
