@@ -16,16 +16,14 @@ const zipperLists = (head1, head2) => {
       current2 = current2.next;
     }else{
       tail.next = current1;
-      current1 = current1.next
+      current1 = current1.next;
     }
-   tail = tail.next
+    tail = tail.next;
     count += 1;
   }
-​
-  if(current1 === null) tail.next = current2;
-  if(current2 === null) tail.next = current1;
-  
-  return head1
+   if(current1 === null) tail.next = current2;
+    if(current2 === null) tail.next = current1;
+  return head1;
 };
 ​
 module.exports = {
