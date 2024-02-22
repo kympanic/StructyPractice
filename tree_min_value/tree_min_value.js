@@ -7,8 +7,8 @@
 // }
 ​
 const treeMinValue = (root) => {
-  if(root === null) return Infinity
-  return Math.min(root.val, treeMinValue(root.left), treeMinValue(root.right))
+  if(root === null)return Infinity;
+  return Math.min(root.val,treeMinValue(root.left), treeMinValue(root.right))
 };
 ​
 module.exports = {
