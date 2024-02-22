@@ -6,13 +6,11 @@ const fiveSort = (nums) => {
       j -= 1;
     }else if(nums[i] === 5){
       [nums[i],nums[j]] = [nums[j],nums[i]]
-      i+=1
     }else{
-      i+= 1
+      i+=1
     }
-​
   }
-  return nums;
+  return nums
 };
 ​
 module.exports = {
