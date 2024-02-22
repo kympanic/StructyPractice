@@ -7,16 +7,17 @@
 // }
 ​
 const breadthFirstValues = (root) => {
-  if(root === null) return [];
-  let results = [];
+  if(root === null) return []
+  let result = [];
   let queue = [root]
   while(queue.length > 0){
     let node = queue.shift();
-    results.push(node.val)
+    result.push(node.val)
+    
     if(node.left !== null) queue.push(node.left)
     if(node.right !== null) queue.push(node.right)
   }
-  return results;
+  return result;
 };
 ​
 module.exports = {
