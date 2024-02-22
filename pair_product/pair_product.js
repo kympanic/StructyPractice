@@ -1,10 +1,11 @@
 const pairProduct = (numbers, targetProduct) => {
-  let results = {}
+  let previousNums = [];
   for(let i = 0; i < numbers.length; i++){
-    let num = numbers[i]
-    let complement = targetProduct / num;
-    if(complement in results) return [i,results[complement]]
-    results[num] = i
+    let number = numbers[i];
+    let complement = targetProduct / number;
+    if(complement in previousNums) return [i,previousNums[complement]]
+    
+    previousNums[number] = i
   }
 };
 ​
