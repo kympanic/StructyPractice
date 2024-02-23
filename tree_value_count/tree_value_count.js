@@ -7,17 +7,9 @@
 // }
 ​
 const treeValueCount = (root, target) => {
-  if(root === null) return 0
-  let count = 0;
-  let stack = [root]
-  while(stack.length > 0){
-    let node = stack.pop()
-    if(node.val === target) count += 1;
-    
-    if(node.right !== null) stack.push(node.right)
-    if(node.left !== null) stack.push(node.left)
-  }
-  return count
+  if(root === null) return 0;
+  let count = root.val === target ? 1 : 0;
+  return count + treeValueCount(root.left,target) + treeValueCount(root.right,target)
 };
 ​
 module.exports = {
