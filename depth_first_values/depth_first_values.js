@@ -8,7 +8,7 @@
 ​
 const depthFirstValues = (root) => {
   if(root === null) return [];
-  return [root.val,...depthFirstValues(root.left),...depthFirstValues(root.right)]
+  return [root.val, ...depthFirstValues(root.left),...depthFirstValues(root.right)]
 };
 ​
 module.exports = {
