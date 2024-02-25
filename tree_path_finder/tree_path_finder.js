@@ -7,16 +7,16 @@
 // }
 ​
 const pathFinder = (root, target) => {
-  if(root === null) return null
+  if(root === null) return null;
   if(root.val === target) return [root.val]
   
-  const leftPath = pathFinder(root.left,target)
-  if(leftPath!== null) return [root.val, ...leftPath]
+  let leftSide = pathFinder(root.left,target)
+  if(leftSide !== null) return [root.val,...leftSide]
   
-  const rightPath = pathFinder(root.right,target)
-  if(rightPath !== null) return [root.val, ...rightPath]
+  let rightSide = pathFinder(root.right,target)
+  if(rightSide !== null) return [root.val,...rightSide]
   
-  return null;
+  return null
 };
 ​
 module.exports = {
