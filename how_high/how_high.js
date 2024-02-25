@@ -8,9 +8,10 @@
 ​
 const howHigh = (node) => {
   if(node === null) return -1;
-  let leftHeight = howHigh(node.left)
-  let rightHeight = howHigh(node.right)
-  return 1 + Math.max(leftHeight,rightHeight)
+  let leftSide = howHigh(node.left)
+  let rightSide = howHigh(node.right)
+  console.log(leftSide)
+  return 1 + Math.max(leftSide,rightSide)
 };
 ​
 module.exports = {
