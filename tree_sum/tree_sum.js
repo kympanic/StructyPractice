@@ -15,4 +15,3 @@ module.exports = {
   treeSum,
 };
 ​
-  const rightValues = depthFirstValues(root.right)
