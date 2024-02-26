@@ -8,8 +8,16 @@
 ​
 const treeValueCount = (root, target) => {
   if(root === null) return 0;
-  let count = root.val === target ? 1 : 0
-  return count + treeValueCount(root.left,target) + treeValueCount(root.right,target)
+  let count = 0;
+  let stack = [root]
+  while(stack.length > 0){
+    let current = stack.pop();
+    if(current.val === target) count +=1
+    
+    if(current.right !== null) stack.push(current.right)
+    if(current.left !== null) stack.push(current.left)
+  }
+  return count
 };
 ​
 module.exports = {
