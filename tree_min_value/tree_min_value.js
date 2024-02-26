@@ -7,19 +7,8 @@
 // }
 ​
 const treeMinValue = (root) => {
-  let min = Infinity;
-  let stack = [root];
-  while(stack.length > 0){
-    let current = stack.pop();
-    if(current.val < min){
-      min = current.val
-    }
-    
-    if(current.right !== null) stack.push(current.right)
-    if(current.left !== null) stack.push(current.left)
-  }
-  
-  return min;
+  if(root === null) return Infinity;
+  return Math.min(root.val, treeMinValue(root.left),treeMinValue(root.right))
 };
 ​
 module.exports = {
