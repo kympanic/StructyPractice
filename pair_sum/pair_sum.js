@@ -1,18 +1,18 @@
 const pairSum = (numbers, targetSum) => {
-  let result = {}
-  let final =[]
-  for(let i = 0; i < numbers.length;i++){
-    let num = numbers[i]
-    let complement = targetSum - num;
-    if(complement in result){
-      final.push(i, result[complement])
-    }
-    result[num] = i;
+  let previousNums = {}
+  
+  for(let i = 0; i < numbers.length; i++){
+    let number = numbers[i]
+    let complement = targetSum - number
+    if(complement in previousNums) return [previousNums[complement],i]
+    previousNums[number] = i;
   }
-  return final
+  
+  
 };
 ​
 module.exports = {
   pairSum,
 };
 ​
+    if(!(counter.has(char))){
