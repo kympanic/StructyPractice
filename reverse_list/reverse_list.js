@@ -7,14 +7,14 @@
 ​
 const reverseList = (head) => {
   let currentNode = head;
-  let prev = null;
+  let previousNode = null;
   while(currentNode !== null){
     let next = currentNode.next;
-    currentNode.next = prev;
-    prev = currentNode;
+    currentNode.next = previousNode;
+    previousNode = currentNode;
     currentNode = next;
   }
-  return prev;
+  return previousNode
 };
 ​
 module.exports = {
