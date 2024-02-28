@@ -8,15 +8,16 @@ class Node {
 const createLinkedList = (values) => {
   let dummyHead = new Node(null)
   let tail = dummyHead;
-  for(let item of values){
-    tail.next = new Node(item)
-    tail = tail.next
+  
+  for(let char of values){
+    tail.next = new Node(char)
+    tail = tail.next;
   }
-  return dummyHead.next
+  return dummyHead.next;
 };
 ​
 module.exports = {
   createLinkedList,
 };
 ​
-};
+  
