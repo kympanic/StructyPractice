@@ -7,21 +7,18 @@
 // }
 ​
 const allTreePaths = (root) => {
-  if(root === null) return []
-  if(root.left === null && root.right == null) return [[root.val]]
+  if(root === null) return [];
+  if(root.left === null && root.right === null) return [[root.val]]
   
   let paths = []
-  
-  let lethPath = allTreePaths(root.left)
-  
-  for(let path of lethPath){
-    paths.push([root.val,...path])
+  let leftPath = allTreePaths(root.left)
+  for(let subPath of leftPath){
+    paths.push([root.val,...subPath])
   }
   let rightPath = allTreePaths(root.right)
-  for(let path of rightPath){
-    paths.push([root.val,...path])
+  for(let subPath of rightPath){
+    paths.push([root.val,...subPath])
   }
-  
   
   return paths;
 };
@@ -30,3 +27,4 @@ module.exports = {
   allTreePaths,
 };
 ​
+  
