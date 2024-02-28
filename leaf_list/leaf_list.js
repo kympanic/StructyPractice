@@ -1,3 +1,4 @@
+
 // class Node {
 //   constructor(val) {
 //     this.val = val;
@@ -7,21 +8,21 @@
 // }
 ​
 const leafList = (root) => {
-  if(root === null) return [];
+  if(root === null) return []
   let stack = [root]
-  let leaves = []
+  let leaves = [];
   while(stack.length > 0){
-    let node = stack.pop();
-    if(node.left === null && node.right === null) leaves.push(node.val)
+    let current = stack.pop();
+    if(current.left === null && current.right === null) leaves.push(current.val)
     
-    if(node.right !== null) stack.push(node.right)
-    if(node.left !== null) stack.push(node.left)
+    if(current.right !== null) stack.push(current.right)
+    if(current.left !== null) stack.push(current.left)
   }
-  return leaves;
+  return leaves
 };
 ​
 module.exports = {
   leafList,
 };
 ​
-    avgs.push(avg(level))
+​
