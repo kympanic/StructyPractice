@@ -1,4 +1,3 @@
-
 // class Node {
 //   constructor(val) {
 //     this.val = val;
@@ -9,14 +8,14 @@
 ​
 const bottomRightValue = (root) => {
   let queue = [root]
-  let current = null
-  while(queue.length > 0){
+  let current = null;
+  while(queue.length){
     current = queue.shift();
     
     if(current.left !== null) queue.push(current.left)
     if(current.right !== null) queue.push(current.right)
   }
-  return current.val
+  return current.val;
 };
 ​
 module.exports = {
