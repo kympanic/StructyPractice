@@ -20,4 +20,4 @@ module.exports = {
   createLinkedList,
 };
 ​
-  
+      newNode.next = current.next.next;
