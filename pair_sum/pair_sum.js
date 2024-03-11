@@ -15,4 +15,3 @@ module.exports = {
   pairSum,
 };
 ​
-    if(!(counter.has(char))){
