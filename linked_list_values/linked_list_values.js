@@ -6,13 +6,14 @@
 // }
 ​
 const linkedListValues = (head) => {
-  let results = [];
   let current = head;
+  let result = [];
   while(current !== null){
-    results.push(current.val)
+    result.push(current.val)
     current = current.next;
   }
-  return results
+  
+  return result;
 };
 ​
 module.exports = {
