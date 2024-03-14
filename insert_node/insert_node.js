@@ -7,20 +7,22 @@ class Node {
 ​
 const insertNode = (head, value, index) => {
   if(index === 0){
-    let newHead = new Node(value)
+    const newHead = new Node(value)
     newHead.next = head;
     return newHead;
   }
+  
   let current = head;
   let count = 0;
   while(current !== null){
-    let next = current.next;
-    if(count === index - 1){
-      current.next = new Node(value);
-      current.next.next = next;
+    if(count === index -1){
+      let next = current.next;
+      let newNode = new Node(value)
+      current.next = newNode;
+      current.next.next = next
     }
-    count += 1
-    current = current.next
+    count ++
+    current = current.next;
   }
   return head;
 };
