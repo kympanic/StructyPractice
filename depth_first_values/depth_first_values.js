@@ -8,7 +8,17 @@
 ​
 const depthFirstValues = (root) => {
   if(root === null) return [];
-  return [root.val, ...depthFirstValues(root.left),...depthFirstValues(root.right)]
+  let stack = [root]
+  let results = [];
+  while(stack.length){
+    let current = stack.pop();
+    results.push(current.val)
+    
+    if(current.right !== null) stack.push(current.right)
+    if(current.left !== null) stack.push(current.left)
+  
+  }
+  return results;
 };
 ​
 module.exports = {
