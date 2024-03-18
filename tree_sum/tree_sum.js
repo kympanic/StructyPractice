@@ -11,6 +11,7 @@ const treeSum = (root) => {
   return root.val + treeSum(root.left) + treeSum(root.right)
 };
 ​
+​
 module.exports = {
   treeSum,
 };
