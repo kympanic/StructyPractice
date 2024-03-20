@@ -8,12 +8,13 @@
 ​
 const howHigh = (node) => {
   if(node === null) return -1;
-  if(node.left === null && node.right === null) return 0;
-  return 1 + Math.max(howHigh(node.left), howHigh(node.right))
+  let leftHeight = howHigh(node.left)
+  let rightHeight = howHigh(node.right)
+  return 1 + Math.max(leftHeight,rightHeight)
 };
 ​
 module.exports = {
   howHigh,
 };
 ​
-  
+  const stack = [root];
