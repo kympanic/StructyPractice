@@ -1,11 +1,11 @@
 const pairProduct = (numbers, targetProduct) => {
-  let previousNums = {};
-  for(let i = 0; i < numbers.length; i++){
-    let number = numbers[i]
-    let complement = targetProduct / number;
-    if(complement in previousNums) return [previousNums[complement], i]
+  let counter = {};
+  for(let i = 0; i < numbers.length;i++){
+    let num = numbers[i]
+    let complement = targetProduct / num;
+    if(complement in counter) return [i,counter[complement]]
     
-    previousNums[number] = i;
+    counter[num] = i;
   }
 };
 ​
@@ -13,4 +13,4 @@ module.exports = {
   pairProduct,
 };
 ​
-    if(!(counter.has(char))){
+      return false;
