@@ -1,13 +1,12 @@
 const intersection = (a, b) => {
-  let results = []
   let setA = new Set(a)
-  for(let char of b){
-    if(setA.has(char)){
-      results.push(char)
+  let results = [];
+  for(let value of b){
+    if(setA.has(value)){
+      results.push(value)
     }
   }
-​
-  return results;
+  return results
 };
 ​
 module.exports = {
