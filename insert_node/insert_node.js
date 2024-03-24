@@ -7,7 +7,7 @@ class Node {
 ​
 const insertNode = (head, value, index) => {
   if(index === 0){
-    const newHead = new Node(value)
+    let newHead = new Node(value);
     newHead.next = head;
     return newHead;
   }
@@ -19,9 +19,9 @@ const insertNode = (head, value, index) => {
       let next = current.next;
       let newNode = new Node(value)
       current.next = newNode;
-      current.next.next = next
+      current.next.next = next;
     }
-    count ++
+    count += 1;
     current = current.next;
   }
   return head;
@@ -31,3 +31,4 @@ module.exports = {
   insertNode,
 };
 ​
+      currentStreak = 1;
