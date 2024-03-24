@@ -5,10 +5,9 @@
 //   }
 // }
 ​
-const isUnivalueList = (head,previousVal = null) => {
-  if(head === null) return false;
+const isUnivalueList = (head) => {
   let current = head;
-  while(current!== null){
+  while(current !== null){
     if(current.val !== head.val) return false;
     current = current.next;
   }
