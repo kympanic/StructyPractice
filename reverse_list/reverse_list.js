@@ -6,15 +6,15 @@
 // }
 ​
 const reverseList = (head) => {
-  let currentNode = head;
-  let previousNode = null;
-  while(currentNode !== null){
-    let next = currentNode.next;
-    currentNode.next = previousNode;
-    previousNode = currentNode;
-    currentNode = next;
+  let current = head;
+  let prev = null;
+  while(current !== null){
+    let next = current.next;
+    current.next = prev;
+    prev = current;
+    current = next;
   }
-  return previousNode
+  return prev
 };
 ​
 module.exports = {
