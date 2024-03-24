@@ -6,9 +6,12 @@
 // }
 ​
 const removeNode = (head, targetVal) => {
-  if(head.val === targetVal) return head.next;
+  if(head.val === targetVal) {
+    return head.next
+  }
+  
   let current = head;
-  let prev = null;
+  let prev = null
   while(current !== null){
     if(current.val === targetVal){
       prev.next = current.next;
@@ -24,3 +27,4 @@ module.exports = {
   removeNode,
 };
 ​
+      currentStreak = 1;
