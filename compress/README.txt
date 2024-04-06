@@ -4,7 +4,6 @@ Write a function, compress, that takes in a string as an argument. The function 
 'cc' compresses to '2c'
 't' should remain as 't'
 
-
 You can assume that the input only contains alphabetic characters.
 
 test_00
