@@ -1,15 +1,25 @@
 const intersection = (a, b) => {
-  let setA = new Set(a)
-  let results = [];
-  for(let value of b){
-    if(setA.has(value)){
-      results.push(value)
-    }
+  
+  let results = [];
+  let setA = new Set(a);
+  for(let val of b){
+    if(setA.has(val)){
+      results.push(val)
+    }
   }
-  return results
+
+
+
+
+
+
+
+
+  return results;
 };
-​
+
+
 module.exports = {
-  intersection,
+  intersection,
 };
-​
+
