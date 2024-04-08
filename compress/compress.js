@@ -11,12 +11,8 @@ const compress = (s) => {
       }else{
         let string = s.slice(i,j)
         if(string.length === 1){
-          console.log(s[i],'char')
           results.push(s[i])
-          console.log(s,"string")
           i = j
-          console.log(i,j,"this is i and j")
-    
         }else{
             results.push(string.length,s[i])
             i = j
