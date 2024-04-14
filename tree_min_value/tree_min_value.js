@@ -1,18 +1,21 @@
 // class Node {
-//   constructor(val) {
-//     this.val = val;
-//     this.left = null;
-//     this.right = null;
-//   }
+//   constructor(val) {
+//     this.val = val;
+//     this.left = null;
+//     this.right = null;
+//   }
 // }
-​
+
+
 const treeMinValue = (root) => {
-  if(root === null) return Infinity;
-  if(root.left === null && root.right === null) return root.val;
-  return Math.min(root.val, treeMinValue(root.left),treeMinValue(root.right))
+  if(root === null) return Infinity;
+  let leftValues = treeMinValue(root.left)
+  let rightValues = treeMinValue(root.right)
+  return Math.min(root.val,leftValues,rightValues)
 };
-​
+
+
 module.exports = {
-  treeMinValue,
+  treeMinValue,
 };
-​
+
