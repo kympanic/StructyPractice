@@ -1,31 +1,25 @@
 const compress = (s) => {
-  //two pointers
   let i = 0;
   let j = 0;
-  let results = [];
-
-
+  let result = [];
   while(j <= s.length){
-      if(s[i] === s[j]){
-        j+=1
+    if(s[i] === s[j]){
+      j+= 1;
+    }else{
+      let number = j - i
+      if(number === 1){
+        result.push(s[i])
       }else{
-        let string = s.slice(i,j)
-        if(string.length === 1){
-          results.push(s[i])
-          i = j
-        }else{
-            results.push(string.length,s[i])
-            i = j
-        }
+        result.push(number,s[i])
       }
+      i = j;
+    }
   }
-  
 
 
 
 
-  return results.join('')
-  
+  return result.join('')
 };
 
 
