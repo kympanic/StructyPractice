@@ -13,12 +13,14 @@ a.next = b;
 b.next = c;
 // a -> b -> c
 
+
 const x = new Node("x");
 const y = new Node("y");
 const z = new Node("z");
 x.next = y;
 y.next = z;
 // x -> y -> z
+
 
 zipperLists(a, x);
 // a -> x -> b -> y -> c -> z
@@ -38,12 +40,14 @@ d.next = e;
 e.next = f;
 // a -> b -> c -> d -> e -> f
 
+
 const x = new Node("x");
 const y = new Node("y");
 const z = new Node("z");
 x.next = y;
 y.next = z;
 // x -> y -> z
+
 
 zipperLists(a, x);
 // a -> x -> b -> y -> c -> z -> d -> e -> f
@@ -55,6 +59,7 @@ const t = new Node("t");
 s.next = t;
 // s -> t
 
+
 const one = new Node(1);
 const two = new Node(2);
 const three = new Node(3);
@@ -64,6 +69,7 @@ two.next = three;
 three.next = four;
 // 1 -> 2 -> 3 -> 4
 
+
 zipperLists(s, one);
 // s -> 1 -> t -> 2 -> 3 -> 4
 
@@ -71,7 +77,9 @@ test_03
 
 const w = new Node("w");
 
+
 // w
+
 
 const one = new Node(1);
 const two = new Node(2);
@@ -79,6 +87,7 @@ const three = new Node(3);
 one.next = two;
 two.next = three;
 // 1 -> 2 -> 3 
+
 
 zipperLists(w, one);
 // w -> 1 -> 2 -> 3
@@ -92,8 +101,10 @@ one.next = two;
 two.next = three;
 // 1 -> 2 -> 3 
 
+
 const w = new Node("w");
 // w
+
 
 zipperLists(one, w);
 // 1 -> w -> 2 -> 3
